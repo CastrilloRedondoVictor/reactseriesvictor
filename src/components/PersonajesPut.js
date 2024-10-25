@@ -124,6 +124,7 @@ export default class PersonajesPut extends Component {
                             </select>
                         </div>
                     </div>
+                    
     
                     <div className="d-flex justify-content-center">
                         <button type="submit" className="btn btn-primary w-50">Modificar Personaje</button>
