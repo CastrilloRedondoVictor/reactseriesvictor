@@ -10,7 +10,7 @@ export default class PersonajesNew extends Component {
   
     state = {
         series: [],
-        creado: false
+        creado: -1
     }
 
     getSeries = () => {
@@ -43,7 +43,7 @@ export default class PersonajesNew extends Component {
   
       axios.post(Global.apiSeries + request, data).then(response => {
         this.setState({
-          creado: true
+          creado: idSerie
         })
       })
     }
@@ -51,7 +51,7 @@ export default class PersonajesNew extends Component {
     componentDidMount = () => {
         this.getSeries();
       this.setState({
-        creado: false
+        creado: -1
       })
     }
   
@@ -94,8 +94,8 @@ export default class PersonajesNew extends Component {
           </form>
   
           {
-            this.state.creado &&
-            (<Navigate to='/' />)
+            this.state.creado !== -1 &&
+            (<Navigate to={`/personajesView/${this.state.creado}`} />)
           }
         </div>
       )

@@ -20,16 +20,6 @@ export default class Router extends Component {
             return <PersonajesView id={id} />
         }
     
-        // function GetIdDCocheGet () {
-        //   let {id} = useParams()
-        //   return <CochesGet id={id} />
-        // }
-    
-        // function GetIdCocheDelete () {
-        //   let {id} = useParams()
-        //   return <CochesDelete id={id} />
-        // }
-    
         return (
             <BrowserRouter>
             <Menu />
@@ -39,10 +29,6 @@ export default class Router extends Component {
                 <Route path='/personajesView/:id' element={ <GetIdPersonajesView /> } />
                 <Route path='/personajesNew/' element={ <PersonajesNew /> } />
                 <Route path='/personajesPut/' element={ <PersonajesPut /> } />
-                {/* <Route path='/new' element={ <CochesInsert /> } />
-                <Route path='/edit/:id' element={ <GetIdDCochePut /> } />
-                <Route path='/get/:id' element={ <GetIdDCocheGet /> } />
-                <Route path='/delete/:id' element={ <GetIdCocheDelete /> } /> */}
             </Routes>
           </BrowserRouter>
         )
