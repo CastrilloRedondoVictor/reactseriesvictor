@@ -34,8 +34,6 @@ export default class PersonajesView extends Component {
   render() {
     return (
       <div>
-        <h1>Personajes de {this.props.id}</h1>
-
         <div className="container text-center mt-5">
         <h1 className="text-center mb-4">Personajes de {this.props.id}</h1>
         <NavLink className='btn btn-danger w-50 m-3' to={`/seriesView/${this.props.id}`}>Volver a serie {this.props.id}</NavLink>
